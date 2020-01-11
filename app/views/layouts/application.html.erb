@@ -10,6 +10,23 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Protocole évaluation de sons</a>
+      </nav>
+    </header>
+
+    <main role="main">
+      <%= yield %>
+    </main>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+      </div>
+    </footer>
+
   </body>
 </html>
