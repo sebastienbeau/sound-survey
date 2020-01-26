@@ -12,20 +12,25 @@
   <body>
     <header>
       <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Protocole évaluation de sons</a>
+        <div class="col-2">
+          <a class="navbar-brand" href="#">Protocole évaluation de sons</a>
+        </div>
+        <div class="progress col-6">
+          <div class="progress-bar progress-bar-striped" role="progressbar" style="width: <%= @progress %>%"></div>
+        </div>
+        <div class="col-2">
+          <% if session[:user_id] %>
+            <a href="/site/logout">Recommencer</a>
+          <% end %>
+        </div>
       </nav>
     </header>
 
-    <main role="main">
+    <main role="main" class="container">
       <%= yield %>
     </main>
 
     <footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-      </div>
     </footer>
 
   </body>

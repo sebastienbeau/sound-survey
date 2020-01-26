@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="row" hidden="true" id="question">
+    <div class="col-12">
+      <audio id="audio">
+          <source src="<%= @sound %>" type="audio/wav">
+      </audio>
+    </div>
+    <%= form_with url: '/answers/new' do %>
+      <input type="hidden" name="sound" value="<%= @sound %>"/>
+      <div class="col-12">
+        <h1>À quel point ce son est-il aversif pour vous ?</h1>
+      </div>
+      <div class="col-12 d-flex justify-content-between">
+        <p>Pas aversif</p>
+        <label><input type="radio" name="aversif" value="1" required>1</label>
+        <label><input type="radio" name="aversif" value="2">2</label>
+        <label><input type="radio" name="aversif" value="3">3</label>
+        <label><input type="radio" name="aversif" value="4">4</label>
+        <label><input type="radio" name="aversif" value="5">5</label>
+        <label><input type="radio" name="aversif" value="6">6</label>
+        <label><input type="radio" name="aversif" value="7">7</label>
+        <label><input type="radio" name="aversif" value="8">8</label>
+        <label><input type="radio" name="aversif" value="9">9</label>
+        <label><input type="radio" name="aversif" value="10">10</label>
+        <p>Extrêmement aversif</p>
+      </div>
+
+      <div class="col-12">
+        <h1>Quelle valence attribuez-vous à ce son ?</h1>
+      </div>
+      <div class="col-12 d-flex justify-content-around">
+        <label><input class="radio-img" type="radio" name="valence" value="1" required><img src="/images/scales/valence_1.png"></label>
+        <label><input class="radio-img" type="radio" name="valence" value="2"><img src="/images/scales/valence_2.png"></label>
+        <label><input class="radio-img" type="radio" name="valence" value="3"><img src="/images/scales/valence_3.png"></label>
+        <label><input class="radio-img" type="radio" name="valence" value="4"><img src="/images/scales/valence_4.png"></label>
+        <label><input class="radio-img" type="radio" name="valence" value="5"><img src="/images/scales/valence_5.png"></label>
+        <label><input class="radio-img" type="radio" name="valence" value="6"><img src="/images/scales/valence_6.png"></label>
+        <label><input class="radio-img" type="radio" name="valence" value="7"><img src="/images/scales/valence_7.png"></label>
+        <label><input class="radio-img" type="radio" name="valence" value="8"><img src="/images/scales/valence_8.png"></label>
+        <label><input class="radio-img" type="radio" name="valence" value="9"><img src="/images/scales/valence_9.png"></label>
+      </div>
+
+      <div class="col-12">
+        <h1>À quel point ce son vous impacte-t-il émotionnellement ?</h1>
+      </div>
+      <div class="col-12 d-flex justify-content-around">
+        <label><input class="radio-img"type="radio" name="arousal" value="1" required><img src="/images/scales/arousal_1.png"></label>
+        <label><input class="radio-img"type="radio" name="arousal" value="2"><img src="/images/scales/arousal_2.png"></label>
+        <label><input class="radio-img"type="radio" name="arousal" value="3"><img src="/images/scales/arousal_3.png"></label>
+        <label><input class="radio-img"type="radio" name="arousal" value="4"><img src="/images/scales/arousal_4.png"></label>
+        <label><input class="radio-img"type="radio" name="arousal" value="5"><img src="/images/scales/arousal_5.png"></label>
+        <label><input class="radio-img"type="radio" name="arousal" value="6"><img src="/images/scales/arousal_6.png"></label>
+        <label><input class="radio-img"type="radio" name="arousal" value="7"><img src="/images/scales/arousal_7.png"></label>
+        <label><input class="radio-img"type="radio" name="arousal" value="8"><img src="/images/scales/arousal_8.png"></label>
+        <label><input class="radio-img"type="radio" name="arousal" value="9"><img src="/images/scales/arousal_9.png"></label>
+      </div>
+
+      <div class="col-12">
+        <h1>Est-ce que ce son vous évoque une douleur physique ?</h1>
+      </div>
+      <div class="col-12 d-flex justify-content-between">
+        <label><input type="radio" name="douleur" value="1"required>Pas du tout</label>
+        <label><input type="radio" name="douleur" value="2">Un peu</label>
+        <label><input type="radio" name="douleur" value="3">Moyennement</label>
+        <label><input type="radio" name="douleur" value="4">Beaucoup</label>
+        <label><input type="radio" name="douleur" value="5">Fortement</label>
+      </div>
+      <div class="col-12 d-flex justify-content-end">
+        <input class="btn btn-primary btn-lg" name="commit" type="submit" value="Suivant" data-disable-with="Suivant"/>
+      </div>
+    <% end %>
+  <div>
+<div>

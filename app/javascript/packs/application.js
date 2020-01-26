@@ -21,4 +21,12 @@ require("@fortawesome/fontawesome-free");
 
 document.addEventListener("turbolinks:load", () => {
   $('[data-toggle="tooltip"]').tooltip()
+  var audio = document.getElementById('audio');
+  if (audio) {
+    audio.play();
+    audio.onended = function() {
+      document.getElementById('question').hidden = false;
+    }
+  };
 })
+
