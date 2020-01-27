@@ -1,0 +1,17 @@
+#!/bin/bash
+
+mkdir -p /db/export
+
+sqlite3 /db/production.sqlite3 <<!
+.headers on
+.mode csv
+.output /db/export/users.csv
+select * from users;
+!
+
+sqlite3 /db/production.sqlite3 <<!
+.headers on
+.mode csv
+.output /db/export/answers.csv
+select * from answers;
+!

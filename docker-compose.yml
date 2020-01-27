@@ -1,0 +1,20 @@
+services:
+  web:
+    build:
+      context: .
+      args:
+        UID: ${UID}
+    env_file:
+      - environment
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../data/db/:/db/
+      - ../data//tmp/:/usr/src/app/tmp
+      - ../data/log/:/usr/src/app/log
+    labels:
+      traefik.enable: true
+      traefik.www.frontend.rule: "Host:argi.dy"
+      traefik.www.port: 3000
+      docky.main.service: True
+version: '3'
