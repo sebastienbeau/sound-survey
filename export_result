@@ -6,12 +6,14 @@ sqlite3 /db/production.sqlite3 <<!
 .headers on
 .mode csv
 .output /db/export/users.csv
-select * from users;
+select id, age, gender, "group", created_at as start, updated_at as end from users;
 !
 
 sqlite3 /db/production.sqlite3 <<!
 .headers on
 .mode csv
 .output /db/export/answers.csv
-select * from answers;
+SELECT answers.id, user, u.age, u.gender, u."group", item, aversif, valence, arousal, douleur, answers.created_at as datetime
+FROM answers
+JOIN users AS u ON u.id = answers.user;
 !
