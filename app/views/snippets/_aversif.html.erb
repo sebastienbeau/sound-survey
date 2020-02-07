@@ -1,0 +1,9 @@
+<div class="col-12 d-flex justify-content-between">
+    <p>Pas du tout désaggréable</p>
+    <% for @item in 1..10 %>
+        <label><input type="radio" name="aversif"
+        <%= defined?(check_item) && check_item == @item ? 'checked': '' %>
+          value="<%= @item %>" required><%= @item %></label>
+    <% end -%>
+    <p>Extrêmement désagréable</p>
+</div>

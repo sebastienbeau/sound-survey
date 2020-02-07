@@ -1,0 +1,7 @@
+<div class="col-12 d-flex justify-content-around">
+  <% for @item in 1..9 %>
+    <label><input class="radio-img" type="radio" name="arousal"
+        <%= defined?(check_item) && check_item == @item ? 'checked': '' %>
+        value="<%= @item %>" required><img src="/images/scales/arousal_<%= @item %>.png"></label>
+  <% end -%>
+</div>

@@ -1,0 +1,7 @@
+<div class="col-12 d-flex justify-content-between">
+  <% for @item, @name in [[1, "Pas du tout"], [2, "Un peu"], [3, "Moyennement"], [4, "Beaucoup"], [5, "Fortement"]] %>
+      <label><input type="radio" name="douleur" value="<%= @item %>" required
+        <%= defined?(check_item) && check_item == @item ? 'checked': '' %>
+      ><%= @name %></label>
+  <% end %>
+</div>

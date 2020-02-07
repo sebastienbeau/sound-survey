@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row" id="question">
+    <div class="col-12">
+        <h1>Exemple Neutre</h1>
+        <p>Voici un deuxième exemple d’image qui est connue pour être perçue comme "neutre" par la majorité des gens :</p>
+    </div>
+    <div class="col-12 d-flex justify-content-center">
+       <img src="/images/photo-2.png">
+    </div>
+
+    <div class="col-12">
+      <h1>À quel point cette image est-il désagréable pour vous ?</h1>
+    </div>
+    <%= render "snippets/aversif", check_item: 1 %>
+    <div class="col-12"><p>
+        (Cette image est considérée comme pas du tout désagréable par le(la) participant(e))
+    </p></div>
+
+    <div class="col-12">
+      <h1>Quelle valence attribuez-vous à cette image ?</h1>
+    </div>
+    <%= render "snippets/valence", check_item: 5 %>
+    <div class="col-12"><p>
+        (Cette image provoque une sensation totalement neutre chez le(la) participant(e))
+    </p></div>
+
+    <div class="col-12">
+      <h1>À quel point cette image vous impacte-t-il émotionnellement ?</h1>
+    </div>
+    <%= render "snippets/arousal", check_item: 1 %>
+    <div class="col-12"><p>
+        (Le(la) participant(e) n’est pas touché(e) par cette image)
+    </p></div>
+
+    <div class="col-12">
+      <h1>Est-ce que cette image vous évoque une douleur physique ?</h1>
+    </div>
+    <%= render "snippets/douleur", check_item: 1 %>
+    <div class="col-12"><p>
+        (L’image n’évoque aucune douleur physique chez le(la) participant(e))
+    </p></div>
+
+    <div class="col-12 d-flex justify-content-end">
+      <a class="btn btn-primary btn-lg" href="/site/example3" role="button">Exemple Suivant</a>
+    </div>
+  <div>
+<div>
